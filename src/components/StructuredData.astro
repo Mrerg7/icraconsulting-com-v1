@@ -1,0 +1,65 @@
+---
+import {
+  SITE_URL,
+  SITE_NAME,
+  HERO_IMAGE_URL,
+  ACQUISITION_EMAIL,
+} from '../lib/constants';
+
+const description =
+  'icraconsulting.com — The professional brand for ICRA consulting. The clean, professional .com for Infection Control Risk Assessment advisory services, pre-construction planning, compliance strategy, and healthcare construction expertise.';
+
+const webPage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: `${SITE_NAME} — Premium Domain for ICRA Consulting | Healthcare Compliance Experts`,
+  description,
+  url: SITE_URL,
+  inLanguage: 'en-US',
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: HERO_IMAGE_URL,
+    contentUrl: HERO_IMAGE_URL,
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'ICRA Consulting Domain',
+    description:
+      'Premium .com domain name asset for specialized ICRA consulting, advisory services, and infection control expertise in healthcare construction.',
+  },
+};
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  email: ACQUISITION_EMAIL,
+  logo: HERO_IMAGE_URL,
+  description,
+};
+
+const product = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'icraconsulting.com domain name',
+  description:
+    'Premium .com domain for specialized ICRA consulting and infection control advisory services. The clean, professional brand for healthcare construction compliance expertise.',
+  category: 'Domain Name',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    price: '14997',
+    priceCurrency: 'USD',
+    seller: {
+      '@type': 'Organization',
+      email: ACQUISITION_EMAIL,
+    },
+    url: `mailto:${ACQUISITION_EMAIL}`,
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(webPage)} />
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />
+<script type="application/ld+json" set:html={JSON.stringify(product)} />

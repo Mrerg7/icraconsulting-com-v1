@@ -1,0 +1,17 @@
+name = "icraconsulting-com-v1"
+compatibility_date = "2026-06-29"
+workers_dev = false
+preview_urls = false
+
+[assets]
+directory = "./dist"
+html_handling = "none"
+not_found_handling = "single-page-application"
+
+[[routes]]
+pattern = "icraconsulting.com"
+zone_name = "icraconsulting.com"
+
+[[routes]]
+pattern = "www.icraconsulting.com"
+zone_name = "icraconsulting.com"

@@ -1,0 +1,344 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import InquiryModal from '../components/InquiryModal.astro';
+import { SITE_NAME, ACQUISITION_EMAIL, acquisitionMailto } from '../lib/constants';
+
+const mailto = acquisitionMailto();
+---
+
+<BaseLayout>
+  <Nav />
+
+  <!-- Hero Section -->
+  <header class="healthcare-gradient text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-8 pt-12 pb-16 md:pt-20 md:pb-24">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
+          <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true"></div>
+          <span class="text-sm font-medium tracking-wide">EXCLUSIVELY AVAILABLE</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold mb-4">
+          icraconsulting.com
+        </h1>
+
+        <p class="max-w-3xl text-xl sm:text-2xl md:text-3xl text-teal-100 tracking-tight mb-3">
+          The professional brand for ICRA consulting.
+        </p>
+
+        <p class="max-w-2xl text-base sm:text-lg text-teal-200/90 mb-9">
+          Own the clean .com domain that positions you as the trusted advisor for Infection Control Risk Assessment —
+          pre-construction planning, compliance strategy, training, and expert guidance for healthcare construction projects.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#acquire"
+             class="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white text-teal-700 font-semibold text-base sm:text-lg rounded-3xl hover:bg-teal-50 active:bg-white transition-all shadow-xl shadow-black/10">
+            <span>Secure This Domain</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-active:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+          </a>
+
+          <a href="#opportunity"
+             class="inline-flex items-center justify-center gap-x-2 px-7 py-4 border border-white/30 hover:bg-white/10 text-white font-medium rounded-3xl transition-all text-base sm:text-lg">
+            <span>Explore the Opportunity</span>
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-x-6 text-sm">
+          <div class="flex items-center -space-x-1" aria-hidden="true">
+            <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
+            <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
+            <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
+          </div>
+          <span class="text-teal-200 text-sm">The trusted advisor brand in healthcare construction compliance</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust / Stats Bar -->
+  <div class="border-b border-slate-200 bg-white">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-8 py-5">
+      <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-4 text-center md:text-left">
+        <div class="flex items-center gap-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="font-medium text-sm text-slate-600">Premium .com — professional &amp; established</span>
+        </div>
+        <div class="flex items-center gap-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="font-medium text-sm text-slate-600">Hospitals increasingly seek expert ICRA advisory support</span>
+        </div>
+        <div class="flex items-center gap-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="font-medium text-sm text-slate-600">Pre-construction ICRA planning reduces project risk and cost</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Opportunity Section -->
+  <section id="opportunity" class="max-w-screen-2xl mx-auto px-6 md:px-8 pt-16 pb-12">
+    <div class="max-w-3xl mb-10">
+      <div class="uppercase tracking-[2px] text-teal-600 text-xs font-semibold mb-2">THE MARKET</div>
+      <h2 class="section-header tracking-tighter">Hospitals and contractors need expert ICRA guidance before construction begins.</h2>
+      <p class="mt-4 text-lg text-slate-600">Healthcare construction and renovation projects carry significant infection control risks. Many organizations lack deep in-house ICRA expertise. They increasingly turn to specialized consultants for pre-construction risk assessments, protocol development, contractor training, and ongoing compliance support. This creates strong demand for credible, experienced ICRA consulting firms.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-white border border-slate-200 rounded-3xl p-7 modern-card">
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-5xl font-semibold tracking-tighter text-slate-900">$30B+</div>
+            <div class="text-teal-600 font-medium mt-1">Annual U.S. hospital &amp; clinic construction spend</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-teal-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m7.5-18v18m7.5-18v18" /></svg>
+        </div>
+        <p class="text-sm text-slate-500 mt-5 leading-snug">Major capital projects and ongoing renovations create continuous need for expert ICRA planning and advisory services.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-3xl p-7 modern-card">
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-5xl font-semibold tracking-tighter text-slate-900">High Stakes</div>
+            <div class="text-teal-600 font-medium mt-1">Early ICRA involvement prevents costly problems</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+        </div>
+        <p class="text-sm text-slate-500 mt-5 leading-snug">Projects that engage ICRA expertise early experience fewer delays, fewer contamination events, and smoother Joint Commission inspections.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-3xl p-7 modern-card">
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-5xl font-semibold tracking-tighter text-slate-900">Premium Services</div>
+            <div class="text-teal-600 font-medium mt-1">Expert advisory commands strong fees</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-teal-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.023 6.023 0 01-2.77.774 6.023 6.023 0 01-2.77-.774" /></svg>
+        </div>
+        <p class="text-sm text-slate-500 mt-5 leading-snug">Specialized ICRA consulting, pre-construction planning, and compliance support are high-value services with recurring revenue potential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Brand Section -->
+  <section id="brand" class="bg-white border-y border-slate-200 py-16">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-8">
+      <div class="max-w-3xl mb-10">
+        <div class="uppercase tracking-[2px] text-teal-600 text-xs font-semibold mb-2">THE ICRA CONSULTING BRAND</div>
+        <h2 class="section-header tracking-tighter">What icraconsulting.com represents.</h2>
+        <p class="mt-4 text-lg text-slate-600">This is the professional brand for the consulting firm that brings deep expertise, strategic thinking, and practical guidance to Infection Control Risk Assessment in healthcare construction.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 modern-card">
+          <div class="w-11 h-11 flex items-center justify-center bg-teal-100 text-teal-600 rounded-2xl mb-5" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
+          </div>
+          <h4 class="font-semibold text-lg tracking-tight mb-2">Pre-Construction Planning</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">Comprehensive ICRA risk assessments during design and pre-construction phases to identify risks early and develop effective mitigation strategies.</p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 modern-card">
+          <div class="w-11 h-11 flex items-center justify-center bg-teal-100 text-teal-600 rounded-2xl mb-5" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+          </div>
+          <h4 class="font-semibold text-lg tracking-tight mb-2">ICRA Team Facilitation</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">Expert facilitation of multidisciplinary ICRA teams, helping hospitals, architects, and contractors align on risk levels, protocols, and responsibilities.</p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 modern-card">
+          <div class="w-11 h-11 flex items-center justify-center bg-teal-100 text-teal-600 rounded-2xl mb-5" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+          </div>
+          <h4 class="font-semibold text-lg tracking-tight mb-2">Training &amp; Education</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">Development and delivery of targeted ICRA training programs for contractors, facility staff, and project teams — from awareness to advanced certification-level content.</p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 modern-card">
+          <div class="w-11 h-11 flex items-center justify-center bg-teal-100 text-teal-600 rounded-2xl mb-5" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+          </div>
+          <h4 class="font-semibold text-lg tracking-tight mb-2">Compliance Strategy &amp; Support</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">Ongoing advisory support for ICRA documentation, monitoring programs, emergency response planning, and preparation for regulatory inspections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Domain Section -->
+  <section id="why-domain" class="max-w-screen-2xl mx-auto px-6 md:px-8 py-16">
+    <div class="max-w-3xl mb-9">
+      <div class="uppercase tracking-[2px] text-teal-600 text-xs font-semibold mb-2">THE STRATEGIC ASSET</div>
+      <h2 class="section-header tracking-tighter">Why icraconsulting.com is a strong professional brand.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="text-teal-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg></div>
+          <h4 class="font-semibold text-xl tracking-tight">Clean Professional .com</h4>
+        </div>
+        <p class="text-slate-600">The full phrase "ICRA Consulting" as a .com is clear, professional, and instantly communicates exactly what the firm does. It projects credibility and expertise from the first impression.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="text-teal-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div>
+          <h4 class="font-semibold text-xl tracking-tight">Professional Email &amp; Communications</h4>
+        </div>
+        <p class="text-slate-600">@icraconsulting.com addresses look established and trustworthy on proposals, reports, contracts, and client communications — essential for a consulting practice.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="text-teal-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg></div>
+          <h4 class="font-semibold text-xl tracking-tight">Highly Brandable &amp; Memorable</h4>
+        </div>
+        <p class="text-slate-600">Clean, readable, and easy to communicate. Works exceptionally well for a consulting website, marketing materials, LinkedIn presence, and verbal introductions.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="text-teal-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg></div>
+          <h4 class="font-semibold text-xl tracking-tight">Strong Search Alignment</h4>
+        </div>
+        <p class="text-slate-600">Excellent match for high-intent searches such as "ICRA consulting", "ICRA advisor", "healthcare construction infection control consultant", and related B2B terms.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="text-teal-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182" /></svg></div>
+          <h4 class="font-semibold text-xl tracking-tight">Scalable &amp; Future-Proof</h4>
+        </div>
+        <p class="text-slate-600">The brand supports growth from solo practitioner to full consulting firm, and can expand into training programs, digital tools, or certification services over time.</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+        <div class="flex items-center gap-x-3 mb-4">
+          <div class="text-teal-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" /></svg></div>
+          <h4 class="font-semibold text-xl tracking-tight">Multiple High-Value Revenue Streams</h4>
+        </div>
+        <p class="text-slate-600">Project-based consulting · Retainer advisory services · Training &amp; workshops · Pre-construction ICRA planning packages · Compliance program development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Models Section -->
+  <section class="bg-slate-900 text-white py-16">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-8">
+      <div class="max-w-2xl mb-9">
+        <div class="text-teal-400 text-xs tracking-[2px] font-semibold mb-2">BUILD THE CONSULTING PRACTICE</div>
+        <h2 class="text-4xl tracking-tighter font-semibold">High-potential ways to activate icraconsulting.com.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+          <h5 class="font-semibold mb-1.5">Specialized ICRA Consulting Firm</h5>
+          <p class="text-sm text-white/70">Build a premier consulting practice focused on pre-construction ICRA planning, risk assessment, and compliance strategy for healthcare projects.</p>
+        </div>
+        <div class="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+          <h5 class="font-semibold mb-1.5">Training &amp; Advisory Hybrid</h5>
+          <p class="text-sm text-white/70">Combine high-value consulting engagements with training programs, workshops, and certification courses for contractors and hospital teams.</p>
+        </div>
+        <div class="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>
+          <h5 class="font-semibold mb-1.5">Digital Tools &amp; Resources</h5>
+          <p class="text-sm text-white/70">Develop templates, checklists, digital ICRA planning tools, or a resource platform sold alongside consulting services.</p>
+        </div>
+        <div class="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+          <h5 class="font-semibold mb-1.5">National or Regional Practice</h5>
+          <p class="text-sm text-white/70">Scale from local/regional advisory work to a national practice serving major health systems and large general contractors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It's Perfect For -->
+  <section class="max-w-screen-2xl mx-auto px-6 md:px-8 py-16 border-b border-slate-200">
+    <div class="max-w-3xl">
+      <h2 class="section-header tracking-tighter mb-3">Who should acquire icraconsulting.com?</h2>
+      <p class="text-lg text-slate-600">This clean professional .com is ideal for consultants, advisors, and firms ready to own the most direct and credible brand in ICRA consulting.</p>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
+      <div class="flex gap-x-4">
+        <div class="mt-1 text-teal-600" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg></div>
+        <div>
+          <div class="font-semibold">ICRA Consultants &amp; Advisors</div>
+          <div class="text-slate-600">Establish the leading professional brand for ICRA consulting and pre-construction advisory services.</div>
+        </div>
+      </div>
+      <div class="flex gap-x-4">
+        <div class="mt-1 text-teal-600" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg></div>
+        <div>
+          <div class="font-semibold">Training &amp; Education Providers</div>
+          <div class="text-slate-600">Build a consulting + training practice focused on ICRA best practices and workforce development.</div>
+        </div>
+      </div>
+      <div class="flex gap-x-4">
+        <div class="mt-1 text-teal-600" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg></div>
+        <div>
+          <div class="font-semibold">Compliance &amp; Risk Management Firms</div>
+          <div class="text-slate-600">Position your firm as the go-to expert for ICRA strategy and infection control risk management in construction.</div>
+        </div>
+      </div>
+      <div class="flex gap-x-4">
+        <div class="mt-1 text-teal-600" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m7.5-18v18m7.5-18v18" /></svg></div>
+        <div>
+          <div class="font-semibold">Existing Consulting Practices</div>
+          <div class="text-slate-600">Rebrand or launch a specialized ICRA advisory division under a clear, credible, and ownable name.</div>
+        </div>
+      </div>
+      <div class="flex gap-x-4">
+        <div class="mt-1 text-teal-600" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg></div>
+        <div>
+          <div class="font-semibold">Solo Practitioners Scaling Up</div>
+          <div class="text-slate-600">Move from independent consulting to a branded firm with a professional .com that supports growth and team building.</div>
+        </div>
+      </div>
+      <div class="flex gap-x-4">
+        <div class="mt-1 text-teal-600" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" /></svg></div>
+        <div>
+          <div class="font-semibold">Strategic Investors &amp; Acquirers</div>
+          <div class="text-slate-600">Acquire a clean, professional .com domain with clear commercial application in a growing, high-value consulting niche.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA / Acquire Section -->
+  <section id="acquire" class="max-w-screen-2xl mx-auto px-6 md:px-8 py-20">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="inline-flex premium-badge mb-4">EXCLUSIVE OPPORTUNITY</div>
+
+      <h2 class="text-5xl tracking-tighter font-semibold mb-4">Own the professional brand for ICRA consulting.</h2>
+      <p class="text-xl text-slate-600 max-w-md mx-auto">icraconsulting.com is available for acquisition. Secure the clean, credible .com that positions you as the trusted expert advisor in this critical niche.</p>
+
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="showInquiryModal()"
+                class="w-full sm:w-auto px-10 py-4 bg-teal-600 hover:bg-teal-700 active:bg-teal-800 transition-all text-white font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 shadow-lg shadow-teal-600/30">
+          <span>Submit Acquisition Inquiry</span>
+        </button>
+
+        <a href={mailto}
+           class="w-full sm:w-auto px-8 py-4 border border-slate-300 hover:bg-slate-100 transition-all font-medium text-slate-700 rounded-3xl flex items-center justify-center gap-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+          <span>Email {ACQUISITION_EMAIL}</span>
+        </a>
+      </div>
+
+      <div class="mt-8 text-xs text-slate-500 flex items-center justify-center gap-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+        <span>Confidential inquiries • Professional escrow transfer • Fast closing available</span>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <InquiryModal />
+</BaseLayout>
