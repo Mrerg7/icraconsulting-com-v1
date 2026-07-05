@@ -1,4 +1,4 @@
-# Canonical Link header for root path
+# Canonical Link header for homepage (reinforces HTML canonical)
 /
   Link: <https://icraconsulting.com/>; rel="canonical"
 

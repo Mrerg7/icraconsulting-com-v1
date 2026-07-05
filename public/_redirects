@@ -1,1 +1,4 @@
-# Static single-page site — no redirects needed
+# Consolidate duplicate URLs to a single canonical origin + path
+https://www.icraconsulting.com/* https://icraconsulting.com/:splat 301!
+https://icraconsulting.com / 301!
+/index.html / 301!

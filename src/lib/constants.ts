@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://icraconsulting.com';
+export const SITE_URL = 'https://icraconsulting.com/';
 export const SITE_NAME = 'icraconsulting.com';
 export const ACQUISITION_EMAIL = 'sales@desertrich.com';
 export const GOOGLE_SITE_VERIFICATION = 'fYu3vsueWGRI-_g6WKj5YC8RTN22oBO8uhLNM4RfLhU';

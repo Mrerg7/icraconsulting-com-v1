@@ -4,7 +4,7 @@ export const GET: APIRoute = () => {
   const robots = `User-agent: *
 Allow: /
 
-Sitemap: https://icraconsulting.com/sitemap.xml
+Sitemap: https://icraconsulting.com/sitemap-index.xml
 `;
 
   return new Response(robots, {
